@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 1.6rem 2.2rem 1.2rem;
+  box-sizing: border-box;
+}
+
+.container.container--flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.container.container--bg-img {
+  background-image: url('img/eberhard-grossgasteiger-u4RMq06Qg3M-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(49, 159, 255);
+}
+
+.container.container--bg-img::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(151, 151, 151, 0.323);
+  background-image: linear-gradient(
+    rgba(86, 86, 86, 0.246),
+    rgba(86, 86, 86, 0.59),
+    rgba(42, 42, 42, 0.604)
+  );
+  z-index: 1;
+}
+
+.float--right {
+  float: right;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.credit {
+  background-color: rgba(109, 135, 158, 0.403);
+  color: rgb(229, 229, 229);
+  z-index: 1;
+  padding: 0.3rem 0.6rem;
+}
+
+/* Login Start */
+.login {
+  background-color: transparent;
+  position: relative;
+  padding: 1.5rem 3.6rem;
+  border-radius: 3rem;
+  height: 36rem;
+  width: 25rem;
+  z-index: 4;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px hsla(0, 0%, 29%, 0.471),
+    1px 1px 4px hsla(0, 0%, 22%, 0.337);
+}
+
+.login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: transparent;
+  backdrop-filter: blur(0.5rem);
+}
+
+.login__heading {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  color: rgb(250, 250, 250);
+  user-select: none;
+}
+
+.login__form {
+  width: 100%;
+}
+
+.login__control {
+  position: relative;
+  user-select: none;
+}
+
+.login__control input {
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 0.8rem;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 3.6rem;
+  border-radius: 3rem;
+  border: 0;
+  background-color: rgb(250, 250, 250);
+  opacity: 0.7;
+  box-shadow: 1px 1px 4px hsla(180, 3%, 6%, 0.469);
+  transition: opacity 0.2s ease-in;
+}
+
+.login__control:nth-child(1n + 2) input {
+  margin-bottom: 2rem;
+}
+
+.login__control input::placeholder {
+  opacity: 0;
+}
+
+.login__control input:focus,
+.login__control input:not(:placeholder-shown) {
+  opacity: 1;
+}
+
+.login__control label {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  font-size: 1.4rem;
+  transform: translateX(1rem) translateY(calc(50% + 0.2rem));
+  transition: transform 0.2s ease-in, color 0.2s 0.1s ease-in;
+}
+
+.login__control input:focus ~ label,
+.login__control input:not(:placeholder-shown) ~ label {
+  transform: translateY(-120%) translateX(1rem);
+  color: rgb(250, 250, 250);
+}
+
+.login__control input[type='submit'],
+.login__control button {
+  width: 8rem;
+  height: 3.2rem;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  border: 0;
+  opacity: 0.7;
+  box-shadow: 1px 1px 4px hsla(180, 3%, 6%, 0.469);
+  transition: transform 0.2s ease-in, opacity 0.2s 0.1s ease-out;
+}
+
+.login__control input[type='submit']:hover,
+.login__control button:hover {
+  opacity: 1;
+}
+
+.login__control input[type='submit']:active,
+.login__control button:active {
+  transform: scale(0.9);
+}
+
+.login__info {
+  margin-bottom: 2.2rem;
+  margin-top: 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  user-select: none;
+}
+
+.login__info a {
+  color: rgb(229, 229, 229);
+}
+
+.login__remember {
+  color: rgb(229, 229, 229);
+  position: relative;
+  cursor: pointer;
+  padding-left: 2rem;
+  user-select: none;
+}
+
+.login__info a:hover,
+.login__remember:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 6px rgb(63, 63, 63);
+}
+
+.login__remember input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.login__remember .login__remember__checkmark {
+  width: 1.6rem;
+  height: 1.6rem;
+  top: 0;
+  left: 0;
+  background-color: rgb(229, 229, 229);
+  border-radius: 0.7rem;
+  z-index: 5;
+  display: block;
+  position: absolute;
+  transform: translateY(-0.2rem);
+}
+
+.login__remember .login__remember__checkmark::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0.3rem;
+  left: 0.65rem;
+  width: 0.2rem;
+  height: 0.6rem;
+  border: solid rgb(84, 84, 84);
+  border-width: 0 0.2rem 0.2rem 0;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease-out;
+}
+
+.login__remember:hover .login__remember__checkmark {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 6px rgb(63, 63, 63);
+}
+
+.login__remember input:checked ~ .login__remember__checkmark::after {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+
+@media screen and (max-width: 521px) {
+  .login {
+    padding: .5rem 1rem
+  }
+}
