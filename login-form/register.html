@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glassmorphism Login Form</title>
+    <title>Glassmorphism Register Form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,33 +20,29 @@
         >Unsplash</a
       > -->
 
-      <div class="login">
-        <h2 class="login__heading">Welcome!</h2>
-        <form class="login__form">
-          <div class="login__control">
-            <input class="login__input" id="username" type="text" placeholder="Username" />
-            <label class="login__label" for="username">Username</label>
+      <div class="register">
+        <h2 class="register__heading">Create Account!</h2>
+        <form class="register__form">
+          <div class="register__control">
+            <input class="register__input" id="username" type="text" placeholder="Username" />
+            <label class="register__label" for="username">Username</label>
           </div>
-          <div class="login__control">
-            <input class="login__input" id="password" type="password" placeholder="********" />
-            <label class="login__label" for="password">Password</label>
+          <div class="register__control">
+            <input class="register__input" id="email" type="email" placeholder="Email" />
+            <label class="register__label" for="email">Email</label>
           </div>
-          <p class="login__info login__info--clearfix">
-            <label class="login__remember" for="remember">
-              <span class="login__remember-text">Remember me?</span>
-              <input class="login__remember-checkbox" type="checkbox" name="remember" id="remember" />
-              <span class="login__remember-checkmark"></span>
-            </label>
-            <a href="#" class="login__link login__link--float-right">Forgot password?</a>
-          </p>
-          <div class="login__control login__control--clearfix">
-            <button type="button" class="login__button login__button--float-right">
-              Login
+          <div class="register__control">
+            <input class="register__input" id="password" type="password" placeholder="********" />
+            <label class="register__label" for="password">Password</label>
+          </div>
+          <div class="register__control register__control--clearfix">
+            <button type="button" class="register__button register__button--float-right">
+              Register
             </button>
           </div>
         </form>
-        <p class="login__signup-link login__signup-link--clearfix">
-          <a href="register.html" class="login__link">Need an account?</a>
+        <p class="register__signup-link register__signup-link--clearfix">
+          <a href="index.html" class="register__link">Already have an account?</a>
         </p>
       </div>
       <p class="credit">

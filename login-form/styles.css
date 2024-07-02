@@ -49,16 +49,6 @@ body {
   z-index: 1;
 }
 
-.float--right {
-  float: right;
-}
-
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
 .credit {
   background-color: rgba(109, 135, 158, 0.403);
   color: rgb(229, 229, 229);
@@ -67,12 +57,12 @@ body {
 }
 
 /* Login Start */
-.login {
+.login, .register {
   background-color: transparent;
   position: relative;
   padding: 1.5rem 3.6rem;
   border-radius: 3rem;
-  height: 36rem;
+  min-height: 36rem;
   width: 25rem;
   z-index: 4;
   overflow: hidden;
@@ -80,7 +70,7 @@ body {
     1px 1px 4px hsla(0, 0%, 22%, 0.337);
 }
 
-.login::before {
+.login::before, .register::before {
   content: '';
   position: absolute;
   top: 0;
@@ -92,7 +82,7 @@ body {
   backdrop-filter: blur(0.5rem);
 }
 
-.login__heading {
+.login__heading, .register__heading {
   text-align: center;
   margin-bottom: 4rem;
   font-size: 2rem;
@@ -100,22 +90,24 @@ body {
   user-select: none;
 }
 
-.login__form {
+.login__form, .register__form {
   width: 100%;
 }
 
-.login__control {
+.login__control, .register__control {
   position: relative;
   user-select: none;
 }
 
-.login__control input {
+.login__control .login__input,
+.register__control .register__input {
   font-size: 1.8rem;
   width: 100%;
   padding: 0.8rem;
   display: block;
   box-sizing: border-box;
-  margin-bottom: 3.6rem;
+  margin-top: 3.6rem;
+  margin-bottom: 2.4rem;
   border-radius: 3rem;
   border: 0;
   background-color: rgb(250, 250, 250);
@@ -124,20 +116,20 @@ body {
   transition: opacity 0.2s ease-in;
 }
 
-.login__control:nth-child(1n + 2) input {
-  margin-bottom: 2rem;
-}
-
-.login__control input::placeholder {
+.login__control .login__input::placeholder,
+.register__control .register__input::placeholder {
   opacity: 0;
 }
 
-.login__control input:focus,
-.login__control input:not(:placeholder-shown) {
+.login__control .login__input:focus,
+.login__control .login__input:not(:placeholder-shown),
+.register__control .register__input:focus,
+.register__control .register__input:not(:placeholder-shown) {
   opacity: 1;
 }
 
-.login__control label {
+.login__control .login__label,
+.register__control .register__label {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -147,14 +139,16 @@ body {
   transition: transform 0.2s ease-in, color 0.2s 0.1s ease-in;
 }
 
-.login__control input:focus ~ label,
-.login__control input:not(:placeholder-shown) ~ label {
+.login__control .login__input:focus ~ .login__label,
+.login__control .login__input:not(:placeholder-shown) ~ .login__label,
+.register__control .register__input:focus ~ .register__label,
+.register__control .register__input:not(:placeholder-shown) ~ .register__label {
   transform: translateY(-120%) translateX(1rem);
   color: rgb(250, 250, 250);
 }
 
-.login__control input[type='submit'],
-.login__control button {
+.login__control .login__button,
+.register__control .register__button {
   width: 8rem;
   height: 3.2rem;
   box-sizing: border-box;
@@ -164,19 +158,22 @@ body {
   opacity: 0.7;
   box-shadow: 1px 1px 4px hsla(180, 3%, 6%, 0.469);
   transition: transform 0.2s ease-in, opacity 0.2s 0.1s ease-out;
+  cursor: pointer;
 }
 
-.login__control input[type='submit']:hover,
-.login__control button:hover {
+.login__control .login__button:hover,
+.register__control .register__button:hover {
   opacity: 1;
 }
 
-.login__control input[type='submit']:active,
-.login__control button:active {
+.login__control .login__button:active {
   transform: scale(0.9);
 }
 
-.login__info {
+.login__info,
+.login__signup-link,
+.register__info,
+.register__signup-link {
   margin-bottom: 2.2rem;
   margin-top: 1.8rem;
   font-size: 1.1rem;
@@ -184,11 +181,15 @@ body {
   user-select: none;
 }
 
-.login__info a {
+.login__info .login__link,
+.login__signup-link .login__link,
+.register__info .register__link,
+.register__signup-link .register__link {
   color: rgb(229, 229, 229);
 }
 
-.login__remember {
+.login__remember,
+.register__remember {
   color: rgb(229, 229, 229);
   position: relative;
   cursor: pointer;
@@ -196,19 +197,30 @@ body {
   user-select: none;
 }
 
-.login__info a:hover,
-.login__remember:hover {
+.login__info .login__link:hover,
+.login__remember:hover,
+.login__signup-link .login__link:hover,
+.register__info .register__link:hover,
+.register__remember:hover,
+.register__signup-link .register__link:hover {
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 6px rgb(63, 63, 63);
 }
 
-.login__remember input[type='checkbox'] {
+.login__remember .login__remember-checkbox,
+.register__remember .register__remember-checkbox {
   opacity: 0;
   position: absolute;
   z-index: -1;
 }
 
-.login__remember .login__remember__checkmark {
+.login__remember .login__remember-text,
+.register__remember .register__remember-text {
+  font-weight: 400;
+}
+
+.login__remember .login__remember-checkmark,
+.register__remember .register__remember-checkmark {
   width: 1.6rem;
   height: 1.6rem;
   top: 0;
@@ -221,7 +233,8 @@ body {
   transform: translateY(-0.2rem);
 }
 
-.login__remember .login__remember__checkmark::after {
+.login__remember .login__remember-checkmark::after,
+.register__remember .register__remember-checkmark::after {
   content: '';
   position: absolute;
   display: block;
@@ -235,19 +248,38 @@ body {
   transition: opacity 0.2s ease, transform 0.2s ease-out;
 }
 
-.login__remember:hover .login__remember__checkmark {
+.login__remember:hover .login__remember-checkmark,
+.register__remember:hover .register__remember-checkmark {
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 6px rgb(63, 63, 63);
 }
 
-.login__remember input:checked ~ .login__remember__checkmark::after {
+.login__remember .login__remember-checkbox:checked ~ .login__remember-checkmark::after,
+.register__remember .register__remember-checkbox:checked ~ .register__remember-checkmark::after {
   opacity: 1;
   transform: rotate(45deg);
 }
 
+.login__button--float-right,
+.login__link--float-right,
+.register__button--float-right,
+.register__link--float-right {
+  float: right;
+}
+
+.login__info--clearfix::after,
+.login__control--clearfix::after,
+.register__info--clearfix::after,
+.register__control--clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
 
 @media screen and (max-width: 521px) {
-  .login {
+  .login,
+  .register {
     padding: .5rem 1rem
   }
 }
