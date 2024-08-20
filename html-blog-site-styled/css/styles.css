@@ -78,7 +78,7 @@ Recipe
 .recipe-user {
   grid-row: 2;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   padding-bottom: 1.2rem;
   box-shadow: 0 0.3rem rgba(0, 0, 0, 0.183);
@@ -91,6 +91,10 @@ Recipe
   border-radius: 50%;
   display: inline-block;
   margin-bottom: 1.4rem;
+}
+
+.recipe-user-date {
+    font-weight: 300;
 }
 
 .recipe-img {
@@ -126,7 +130,10 @@ Recipe
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 4.2rem;
-  text-indent: 3.6rem;
+}
+
+.recipe-section-description p {
+  margin-bottom: 1.8rem;
 }
 
 .recipe-section-ingredients ul {
@@ -228,4 +235,10 @@ Other Recipe
   font-size: 1.4rem;
   text-decoration: none;
   color: #465246;
+  transition: all 0.3s ease;
+}
+
+.nav-link:active,
+.nav-link:hover {
+  color: #747a70;
 }
