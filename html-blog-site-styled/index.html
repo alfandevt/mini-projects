@@ -3,86 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Masak Books | Nasi Goreng</title>
   </head>
   <body>
-    <header>
-      <h1>Masak Books</h1>
-      <nav>
-        <a href="#">Beranda</a>
-        <a href="#">Kategori</a>
-        <a href="#">Tentang Kami</a>
+    <header class="header">
+      <a class="brand" href="#">
+        <ion-icon class="brand-icon" name="bonfire"></ion-icon>
+        <span class="brand-text">Masak Books</span>
+        <ion-icon class="brand-icon" name="bonfire"></ion-icon>
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Beranda</a></li>
+          <li><a class="main-nav-link" href="#">Kategori</a></li>
+          <li><a class="main-nav-link" href="#">Tentang Kami</a></li>
+        </ul>
       </nav>
     </header>
 
-    <article>
-      <h2>Resep Nasi Goreng <em>&quot;Kebelet&quot;</em></h2>
-      <img src="images/me.jpg" alt="me" width="60" height="60" />
-      <p>
-        Resep oleh <strong>Aldiii</strong>, dimuat hari Senin tanggal 4 Agustus
-        2024
-      </p>
-      <figure>
-        <img
-          src="images/nasi_goreng_wiki.jpeg"
-          alt="nasi goreng"
-          width="500"
-          height="300"
-        />
-        <figcaption>Ilustrasi Nasi Goreng dari <em>Wikipedia</em></figcaption>
-      </figure>
-      <p>
-        Nasi goreng merupakan makanan yang sering kita jumpai mulai abang-abang
-        kaki lima hingga restoran-restoran ternama. Saya sendiri adalah orang
-        yang sangat menyukai nasi goreng dan sering kali berkelana mencari
-        tempat-tempat yang potensial nasi goreng yang enak
-      </p>
-      <p>
-        Pada kesempatan ini saya ingin membagikan resep nasi goreng yang cukup
-        sederhana dan dapat dibuat dengan waktu yang relatif singkat dan dengan
-        bumbu-bumbu yang relatif mudah diperoleh dan tentu mudah untuk
-        memasaknya.
-      </p>
-      <h3>Bahan-bahan</h3>
-      <ul>
-        <li>Bawang Merah</li>
-        <li>Bawang Putih</li>
-        <li>Cabe</li>
-        <li>Garam</li>
-        <li>Penyedap Rasa</li>
-        <li>Nasi</li>
-        <li>Telur</li>
-        <li>Minyak Goreng / Margarin</li>
-        <li>Kecap</li>
-      </ul>
-      <h3>Langkah-Langkah</h3>
-      <ol>
-        <li>Potong halus bawang dan cabe, dan siapkan 1 piring nasi</li>
-        <li>
-          Tuangkan sedikit minyak goreng atau margarin ke dalam wajan
-          penggorengan, lalu panaskan
-        </li>
-        <li>
-          Pecahkan telur dan masukkan isinya ke dalam wajan panas, lalu
-          diorak-arik
-        </li>
-        <li>
-          Setelah itu tuang cabe dan bawang yang telah dipotong halus ke dalam
-          wajan, dan tumis sekitar 5 hingga 10 detik
-        </li>
-        <li>Tuang nasi ke dalam wajan, dan aduk hingga merata</li>
-        <li>
-          Tambahkan 1 sendok teh garam dan 1&sol;2 sendok teh penyedap rasa ke
-          dalam wajan nasi goreng, aduk hingga merata
-        </li>
-        <li>Tuangkan kecap secukupnya dan aduk lagi hingga merata</li>
-        <li>
-          Siapkan piring saji, dan tuangkan nasi goreng ke piring saji dan beri
-          tambahan seperti kerupuk atau acar
-        </li>
-        <li>Nasi Goreng siap untuk disantap!</li>
-      </ol>
-    </article>
+    <section class="section-recipe">
+      <article class="container">
+        <h2>Resep Nasi Goreng <em>&quot;Kebelet&quot;</em></h2>
+        <img src="images/me.jpg" alt="me" width="60" height="60" />
+        <p>
+          Resep oleh <strong>Aldiii</strong>, dimuat hari Senin tanggal 4
+          Agustus 2024
+        </p>
+        <figure>
+          <img
+            src="images/nasi_goreng_wiki.jpeg"
+            alt="nasi goreng"
+            width="500"
+            height="300"
+          />
+          <figcaption>Ilustrasi Nasi Goreng dari <em>Wikipedia</em></figcaption>
+        </figure>
+        <p>
+          Nasi goreng merupakan makanan yang sering kita jumpai mulai
+          abang-abang kaki lima hingga restoran-restoran ternama. Saya sendiri
+          adalah orang yang sangat menyukai nasi goreng dan sering kali
+          berkelana mencari tempat-tempat yang potensial nasi goreng yang enak
+        </p>
+        <p>
+          Pada kesempatan ini saya ingin membagikan resep nasi goreng yang cukup
+          sederhana dan dapat dibuat dengan waktu yang relatif singkat dan
+          dengan bumbu-bumbu yang relatif mudah diperoleh dan tentu mudah untuk
+          memasaknya.
+        </p>
+        <h3>Bahan-bahan</h3>
+        <ul>
+          <li>Bawang Merah</li>
+          <li>Bawang Putih</li>
+          <li>Cabe</li>
+          <li>Garam</li>
+          <li>Penyedap Rasa</li>
+          <li>Nasi</li>
+          <li>Telur</li>
+          <li>Minyak Goreng / Margarin</li>
+          <li>Kecap</li>
+        </ul>
+        <h3>Langkah-Langkah</h3>
+        <ol>
+          <li>Potong halus bawang dan cabe, dan siapkan 1 piring nasi</li>
+          <li>
+            Tuangkan sedikit minyak goreng atau margarin ke dalam wajan
+            penggorengan, lalu panaskan
+          </li>
+          <li>
+            Pecahkan telur dan masukkan isinya ke dalam wajan panas, lalu
+            diorak-arik
+          </li>
+          <li>
+            Setelah itu tuang cabe dan bawang yang telah dipotong halus ke dalam
+            wajan, dan tumis sekitar 5 hingga 10 detik
+          </li>
+          <li>Tuang nasi ke dalam wajan, dan aduk hingga merata</li>
+          <li>
+            Tambahkan 1 sendok teh garam dan 1&sol;2 sendok teh penyedap rasa ke
+            dalam wajan nasi goreng, aduk hingga merata
+          </li>
+          <li>Tuangkan kecap secukupnya dan aduk lagi hingga merata</li>
+          <li>
+            Siapkan piring saji, dan tuangkan nasi goreng ke piring saji dan
+            beri tambahan seperti kerupuk atau acar
+          </li>
+          <li>Nasi Goreng siap untuk disantap!</li>
+        </ol>
+      </article>
+    </section>
 
     <section>
       <h4>Tanggapan</h4>
@@ -164,7 +180,7 @@
         </li>
       </ul>
     </aside>
-    <hr>
+    <hr />
     <footer>
       <p>Copyright &copy; 2024 by Aldiii</p>
       <div>
@@ -173,5 +189,7 @@
         <a href="#">Kontak</a>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>
