@@ -60,7 +60,8 @@
             Nasi goreng merupakan makanan yang sering kita jumpai mulai
             abang-abang kaki lima hingga restoran-restoran ternama. Saya sendiri
             adalah orang yang sangat menyukai nasi goreng dan sering kali
-            berkelana mencari tempat-tempat yang potensial nasi goreng yang enak.
+            berkelana mencari tempat-tempat yang potensial nasi goreng yang
+            enak.
           </p>
           <p>
             Pada kesempatan ini saya ingin membagikan resep nasi goreng yang
@@ -117,93 +118,63 @@
       </article>
     </section>
 
-    <section>
-      <h4>Tanggapan</h4>
-      <form action="#">
-        <fieldset>
-          <legend>Rating dan Komentar</legend>
-          <div><label for="rating">Nilai Resep</label></div>
-          <div>
-            <span>Buruk</span>
-            <input type="range" name="rating" id="rating" />
-            <span>Baik</span>
-          </div>
-
-          <br />
-
-          <div><label for="comment">Komentar</label></div>
-          <div><textarea name="comment" id="comment"></textarea></div>
-          <div>
-            <button>Kirim Tanggapan</button>
-          </div>
-        </fieldset>
-      </form>
+    <section class="section-comments">
+      <div class="container">
+        <div class="card">
+          <h3>
+            <ion-icon name="text"></ion-icon>
+            <span>Komentar</span>
+          </h3>
+          <form class="form" action="#">
+            <div class="form-control">
+              <input name="comment" id="comment" placeholder="Komentar" />
+              <button type="button">Kirim</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h4>Komentar Pengguna lainnya</h4>
-      <dl>
-        <dt><strong>Budi:</strong></dt>
-        <dd>Saya sudah coba buat, enak!</dd>
-        <dt><strong>Ani:</strong></dt>
-        <dd>Mudah masaknya!</dd>
-        <dt><strong>Didi:</strong></dt>
-        <dd>Saya suka resepnya!</dd>
-      </dl>
-    </section>
-
-    <hr />
-    <h4>Resep Populer lainnya</h4>
-    <aside>
-      <ul>
-        <li>
-          <a href="#">
-            <figure>
-              <img
-                src="images/Chicken_Biryani.jpg"
-                alt="img"
-                width="80"
-                height="80"
-              />
-              <figcaption>Nasi Biryani Ayam</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure>
-              <img
-                src="images/Portuguese_sweet_bread.jpg"
-                alt="img"
-                width="80"
-                height="80"
-              />
-              <figcaption>Roti Manis Portugis</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure>
-              <img
-                src="images/Roti_titchu_with_beef_curry.jpg"
-                alt="img"
-                width="80"
-                height="80"
-              />
-              <figcaption>Roti Canai Kari</figcaption>
-            </figure>
-          </a>
-        </li>
-      </ul>
+    <aside class="other-recipe">
+      <div class="container">
+        <h3>Resep Populer lainnya</h3>
+        <ul>
+          <li>
+            <a href="#">
+              <figure>
+                <img src="images/Chicken_Biryani.jpg" alt="img" />
+                <figcaption>Nasi Biryani Ayam</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure>
+                <img src="images/Portuguese_sweet_bread.jpg" alt="img" />
+                <figcaption>Roti Manis Portugis</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure>
+                <img src="images/Roti_titchu_with_beef_curry.jpg" alt="img" />
+                <figcaption>Roti Canai Kari</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
-    <hr />
-    <footer>
-      <p>Copyright &copy; 2024 by Aldiii</p>
-      <div>
-        <a href="#">Bantuan</a>
-        <a href="#">Karir</a>
-        <a href="#">Kontak</a>
+
+    <footer class="footer">
+      <div class="container flex flex--between flex--align-center">
+        <p class="copy">Copyright &copy; 2024 by Aldiii</p>
+        <nav class="footer-nav">
+          <a class="nav-link" href="#">Bantuan</a>
+          <a class="nav-link" href="#">Karir</a>
+          <a class="nav-link" href="#">Kontak</a>
+        </nav>
       </div>
     </footer>
 

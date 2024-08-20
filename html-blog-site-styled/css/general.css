@@ -26,8 +26,71 @@ body {
   color: #202c20;
 }
 
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 0 12.8rem;
+}
+
+.card {
+  padding: 3.2rem;
+  border-radius: 11px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.183);
+}
+.form {
+  margin-top: 3.2rem;
+}
+.form-control {
+  display: flex;
+  height: 4.8rem;
+}
+
+.form-control input {
+  flex: 1 0 20rem;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  border: 0;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.183);
+  font-family: 'Rubik', sans-serif;
+}
+
+.form-control button {
+  flex: 0 0 10rem;
+  background-color: #bce7bd;
+  border: 0;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.183);
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.form-control button:active,
+.form-control button:hover {
+  background-color: rgb(216, 248, 204);
+  color: #2e412e;
+}
+
+.form-control button:active {
+  transform: scale(1.1);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--between {
+  justify-content: space-between;
+}
+
+.flex--align-center {
+  align-items: center;
 }

@@ -7,7 +7,7 @@
   height: 9.8rem;
   padding: 0 5.2rem;
   background-color: #e2f5e3;
-  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.183);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.183);
 }
 
 .brand {
@@ -50,8 +50,14 @@
   box-shadow: 0 0.5rem rgb(4, 140, 56);
 }
 
+/*
+*******************
+Recipe
+*******************
+*/
+
 .section-recipe {
-  padding: 4.8rem 0;
+  padding: 4.8rem 0 2.4rem;
 }
 
 .recipe-header {
@@ -120,39 +126,106 @@
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 4.2rem;
-}
-
-.recipe-section-description p {
   text-indent: 3.6rem;
 }
 
-.recipe-section-ingredients {
-  font-size: 1.8rem;
-  line-height: 1.8;
-  margin-bottom: 3.8rem;
-}
-
-.recipe-section-ingredients h3 {
-  font-size: 2.4rem;
-  margin-bottom: 1.2rem;
-}
-
 .recipe-section-ingredients ul {
-  padding-left: 3.2rem;
   list-style-type: square;
 }
 
+.recipe-section-ingredients,
 .recipe-section-steps {
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 3.8rem;
 }
 
-.recipe-section-steps h3 {
-  font-size: 2.4rem;
-  margin-bottom: 1.2rem;
-}
-
+.recipe-section-ingredients ul,
 .recipe-section-steps ol {
   padding-left: 3.2rem;
+}
+
+/*
+*******************
+Comments
+*******************
+*/
+
+.comment-list {
+  max-width: 15rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*
+*******************
+Other Recipe
+*******************
+*/
+
+.other-recipe {
+  padding: 9.6rem 0;
+}
+
+.other-recipe ul {
+  margin-top: 4.4rem;
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.other-recipe figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 11px;
+}
+
+.other-recipe img {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.other-recipe img:hover {
+  transform: scale(1.1);
+}
+
+.other-recipe figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  background-color: #bce7bd;
+}
+
+/*
+*******************
+Other Recipe
+*******************
+*/
+
+.footer {
+  padding: 3.6rem 0;
+  background: #e7e7e7;
+}
+
+.copy {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #465246;
 }
